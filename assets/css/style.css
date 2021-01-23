@@ -996,11 +996,6 @@ footer {
 }
 
 /* features section */
-#features {
-  background-color: #f8feff;
-  border-top: 1px solid #f0f0f0;
-}
-
 .api-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1134,6 +1129,10 @@ footer {
   color: #00deff;
 }
 
+.analysis-features .title-h2 {
+  color: #fff;
+}
+
 .boost-blocks-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1143,6 +1142,16 @@ footer {
   -ms-flex-direction: row;
   flex-direction: row;
   padding: 90px 50px 0 50px;
+}
+
+.boost-blocks-wrap.inner-page {
+  width: 68.66%;
+  margin: auto;
+  padding-top: 40px;
+}
+
+.boost-blocks-wrap.inner-page .boost-block:nth-child(3n + 2) {
+  margin: 0 0 0 40px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -2449,9 +2458,6 @@ pre {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -2459,13 +2465,11 @@ pre {
 
 .voiceBotCard p {
   color: #fff;
-  background-color: #132d45;
   text-align: center;
-  padding: 34px 16px;
+  padding: 25px 16px;
   border-radius: 10px;
-  width: 240px;
+  width: 20%;
   font-size: 18px;
-  min-height: 230px;
 }
 
 .voiceBotCard p svg {
@@ -2480,8 +2484,9 @@ pre {
 .voiceBotCard span {
   display: block;
   text-align: center;
-  margin: 20px auto;
-  font-size: 30px;
+  margin: 20px auto 10px;
+  font-size: 50px;
+  color: #00deff;
 }
 
 .productsBox a.boost-block {

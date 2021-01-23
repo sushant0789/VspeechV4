@@ -1029,11 +1029,6 @@ footer {
 
 /* features section */
 
-#features {
-  background-color: #f8feff;
-  border-top: 1px solid #f0f0f0;
-}
-
 .api-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1167,6 +1162,9 @@ footer {
     }
   }
 }
+.analysis-features .title-h2 {
+  color: #fff;
+}
 
 .boost-blocks-wrap {
   display: -webkit-box;
@@ -1177,6 +1175,14 @@ footer {
   -ms-flex-direction: row;
   flex-direction: row;
   padding: 90px 50px 0 50px;
+  &.inner-page {
+    width: 68.66%;
+    margin: auto;
+    padding-top: 40px;
+    .boost-block:nth-child(3n + 2) {
+      margin: 0 0 0 40px;
+    }
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -2605,18 +2611,15 @@ pre {
 
 .voiceBotCard {
   display: flex;
-  align-items: center;
   justify-content: space-between;
 
   p {
     color: #fff;
-    background-color: #132d45;
     text-align: center;
-    padding: 34px 16px;
+    padding: 25px 16px;
     border-radius: 10px;
-    width: 240px;
+    width: 20%;
     font-size: 18px;
-    min-height: 230px;
 
     svg {
       display: block;
@@ -2631,8 +2634,9 @@ pre {
   span {
     display: block;
     text-align: center;
-    margin: 20px auto;
-    font-size: 30px;
+    margin: 20px auto 10px;
+    font-size: 50px;
+    color: #00deff;
   }
 }
 
