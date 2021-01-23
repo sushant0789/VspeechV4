@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Speech Recognition API, Voice Recognition, Voice Analysis, Voice Analytics</title>
+<meta name="keywords" content="Speech Recognition, Speech Recognition API, Voice Recognition, Voice Analysis, Voice Analytics" />
+<meta name="description" content="Looking for Speech Recognition? AI driven technology firm provide Speech Recognition API, Voice Recognition, Voice Analysis, Voice Analytics solutions for voice to text." />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<link rel="canonical" href="https://vspeech.ai/" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-156684585-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-156684585-1');
+  </script>
+	<script type="application/ld+json">
+	{
+	 "@context": "http://schema.org",
+	 "@type": "BreadcrumbList",
+	 "itemListElement":
+	 [
+	  {
+	   "@type": "ListItem",
+	   "position": 1,
+	   "item":
+	   {
+		"@id": "https://vspeech.ai/"",
+		"name": "Home"
+		}
+	  },
+	  {
+	   "@type": "ListItem",
+	  "position": 2,
+	  "item":
+	   {
+		 "@id": "https://vspeech.ai/index.html#banner",
+		 "name": "Demo"
+	   }
+	  },
+	  {
+	   "@type": "ListItem",
+	  "position": 3,
+	  "item":
+	   {
+		 "@id": "https://vspeech.ai/product.html",
+		 "name": "Product"
+	   }
+	  },
+	  {
+	   "@type": "ListItem",
+	  "position": 4,
+	  "item":
+	   {
+		 "@id": "https://vspeech.ai/index.html#features",
+		 "name": "Features"
+	   }
+	  },
+	  {
+	   "@type": "ListItem",
+	  "position": 5,
+	  "item":
+	   {
+		 "@id": "https://vspeech.ai/API.html",
+		 "name": "API"
+	   }
+	  },
+	  {
+	   "@type": "ListItem",
+	  "position": 6,
+	  "item":
+	   {
+		 "@id": "https://vspeech.ai/index.html#contact-us",
+		 "name": "Contact"
+	   }
+	  }
+	 ]
+	}
+	</script>
+</head>
+<body>
+<!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+<div id="background-for-menu"></div>
+<div id="banner" class="product-banner">
+  <header>
+    <div class="container">
+      <div class="logo"> <a href="index.html"><i class="sprite sprite-top-logo"></i></a> </div>
+      <div class="toggle-menu"> <span></span> <span></span> <span></span> </div>
+      <nav>
+        <ul>
+            <li><a href="index.html#banner" >Demo</a></li>
+        <li><a href="VoiceAnalysis.html">Voice Analytics</a></li>
+		<li><a href="ASR.html">Speech Recognition</a></li>
+		<li><a href="voicebot.html" >VoiceBot</a></li>
+		<li><a href="products.html" >Products</a></li>
+        <li><a href="API.html" class="active">API</a></li>
+        <li><a href="#contact-us">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="banner-content">
+    <div class="container">
+      <h1>API Documentation</h1>
+      <div style="color: white;">
+        <div>
+          <p>API Endpoint : <span> http://audiotravels.co.in/api/asr</span> <br />
+            Audio Format Supported - <span> wav/mp3</span> <br />
+            Audio Sampling Rate - <span>8kHz</span> <br />
+            Number of Channels - <span> 1</span> <br />
+          </p>
+        </div>
+        <br />
+        <pre>
+
+              <p style="color: #00deff">#1) Async File API</p>
+              <p style="color: #00deff"> A) Submit File</p>
+              
+              <p>To submit an audio file for transcription :</p><br><span class="api-black100"> curl -F "audio=@test_hindi.wav" "http://0.0.0.0:0/recognize?model=model_english&ID=123&type=wave&mode=full"</span>
+
+              <p style="color: #00deff">Parameters :</p>
+      <span>-F  -  Audio file path </span>
+      <span>model - Model name </span>
+      <span>ID - Unique ID </span>
+      <span>type - Wave  (Audio Format) </span>
+      <span>mode - full/transcript   </span>
+        <span>full : Response with segmentation </span>
+        <span>transcript : only transacript </span>
+            
+              <p>You’ll receive a response like this:</p>
+<span style="color: #00deff">mode = full</span>
+
+<div class="api-black">
+
+  {
+    "status": 'success',
+    "ID": 123,
+    "execution_time": < execution time >,
+    "timestamp": < timestamp >,
+    "fullResult": {
+      "result": [
+        {"word": < word >,
+          "start": < start time >,
+          "end": < end time >,
+          "conf": < confidence >,
+          "gender": < male/female >
+        }
+      ],
+    "text": {response text}
+  }
+
+
+</div>
+<span style="color: #00deff">mode = transcript</span>
+ <div class="api-black">
+  {
+    "status": 'success',
+    "ID": "123",
+    "execution_time":< execution time >,
+    "timestamp": < timestamp >,
+    "transcript": < response text >
+  }
+ </div>
+</pre>
+        <pre>
+              
+<p style="color: #00deff">B) Webhook API</p>
+<p style="color: #00deff">Method:</p>
+    PUT/POST/GET
+  
+ <p style="color: #00deff">Data Params – All params must</p>
+
+    S3_URL: [string] – Only wav and mp3 audio format supported.
+    modelID: [string] – Model ID()
+    command: [string] – Commad name – transcribe/segment
+    ID: [string] – Unique Request ID
+    userID: [string] – User ID()
+    mode: [string] – Environment   - prod/dev
+    webhook: [string] – Webhool url, ASR response POST in webhook url
+
+  
+
+<p style="color: #00deff">API  - </p>
+    <p style="color: #00deff;"> POST  </p>
+    
+    curl -d "S3_URL={Audio URL}&modelID=1&ID=XXX&userID=15&mode=prod&command=transcribe
+    &webhook={Webhook URL}" -X POST http://audiotravels.co.in/api/asr
+    <p style="color: #00deff"> PUT  </p>
+    curl -d "S3_URL={Audio URL}&modelID=1&ID=XXX&userID=15&mode=prod&command=transcribe
+    &webhook={Webhook URL}" -X PUT http://audiotravels.co.in/api/asr      
+    <p style="color: #00deff"> GET</p>
+    http://audiotravels.co.in/api/asr?S3_URL={Audio URL}&modelID=1&ID=XXX&userID=15
+    &mode=prod&command=transcribe&webhook={Webhook URL}
+
+
+<p style="color: #00deff">Acknowledgement Status: </p>
+    <p style="color: #00deff">1) Request Verification</p>
+
+      <p style="color: #00deff">1.1) Success: Send success acknowledgement</p>
+
+      {
+          status: 'success',
+          message: 'Request Received Successfully',
+          params:
+          {
+              S3_URL: < Audio File URL > ,
+              modelID: < Model ID > ,
+              ID: < Unique Request ID > ,
+              userID: < User ID > ,
+              webhook: < Webhool URL > ,
+              mode: < Environment > ,
+              command: < Commad Name >
+          },
+          timestamp: < Timestamp >
+      }
+
+
+      <p style="color: #00deff">1.2) Params Error: Send acknowledgement with parameters error message</p>
+
+      {
+           status: 'fail',
+          message: < Invalid Params Error >,
+          params:
+          {
+              S3_URL: < Audio File URL > ,
+              modelID: < Model ID > ,
+              ID: < Unique Request ID > ,
+              userID: < User ID > ,
+              webhook: < Webhool URL > ,
+              mode: < Environment > ,
+              command: < Commad Name >
+          },
+          timestamp: < Timestamp >
+      }
+
+    <p style="color: #00deff">2) Audio Verification</p>
+
+      <p style="color: #00deff">1.1) Success: Send success acknowledgement</p>
+
+      {
+          status: 'success',
+          message: 'Audio File Is Valid',
+          params:
+          {
+              S3_URL: < Audio File URL > ,
+              modelID: < Model ID > ,
+              ID: < Unique Request ID > ,
+              userID: < User ID > ,
+              webhook: < Webhool URL > ,
+              mode: < Environment > ,
+              command: < Commad Name >
+          },
+          timestamp: < Timestamp >
+      }
+
+
+      <p style="color: #00deff">1.2) Error: Send acknowledgement with error message</p>
+
+      {
+           status: 'fail',
+          message: 'Invalid Audio File'
+          params:
+          {
+              S3_URL: < Audio File URL > ,
+              modelID: < Model ID > ,
+              ID: < Unique Request ID > ,
+              userID: < User ID > ,
+              webhook: < Webhool URL > ,
+              mode: < Environment > ,
+              command: < Commad Name >
+          },
+          timestamp: < Timestamp >
+      }
+
+    <p style="color: #00deff">3)  Response</p>
+
+      <p style="color: #00deff">3.1) Success: Send success transcription</p>
+      {
+          status: "success",
+          message: 'Audio Transcript Generated',
+          ID: < Unique Request ID > ,
+          S3_URL: < Audio File URL > ,
+          processing_time: < Processing Time >,
+          timestamp: < Timestamp >,
+          version: < Version >,
+          alternatives: [
+          {
+              transcript: <Transcription>,
+              words: [
+              {
+                  word: <Word>,
+                  start: <Word Start Time>,
+                  end: <Word End Time>,
+                  conf: <Word Confidence>,
+                  gender: <Gender>
+              }],
+              score: <score>
+          }]
+      }
+
+      <p style="color: #00deff">3.2) Error : Send acknowledgement with status</p>
+      {
+          status: 'fail',
+          message: 'Audio Transcript Not Generated',
+          ID: < Unique Request ID > ,
+          S3_URL: < Audio File URL > ,
+          processing_time: < Processing Time >,
+          timestamp: < Timestamp >,
+          version: < Version >,
+          alternatives: [
+          {
+              transcript: <Transcription>,
+              words: [
+              {
+                  word: <Word>,
+                  start: <Word Start Time>,
+                  end: <Word End Time>,
+                  conf: <Word Confidence>,
+                  gender: <Gender>
+              }],
+              score: <score>
+          }]
+      }
+
+      </pre>
+        <pre>
+    <p style="color: #00deff">#2) Streaming API</p>
+
+    Vspeech.ai streaming speech-to-text API (Streaming API) uses the WebSocket protocol
+    to deliver communication over a single TCP connection.
+    
+    API URL : <span> ws://0.0.0.0:0</span>
+    Content Supported - <span> audio/x-raw  / audio/x-flac  / audio/x-wav</span>
+    Audio Sampling Rate - <span>8kHz</span> 
+
+
+     <p>You’ll receive a response like this:</p>
+
+    msg: END OF SESSION: 
+    msg: 8: 
+    msg: 7: Send tag: EOS
+    msg: 5: Send: blob: audio/x-raw, 1486
+    msg: 8: {"partial":"hello one two three"}
+    msg: 5: Send: blob: audio/x-raw, 4460
+    msg: 8: {"partial":"hello one two"}
+    msg: 5: Send: blob: audio/x-raw, 2972
+    msg: 8: {"partial":"hello one two"}
+    msg: 5: Send: blob: audio/x-raw, 2972
+    msg: 8: {"partial":"hello one"}
+    msg: 8: {"partial":""}
+    msg: 5: Send: blob: audio/x-raw, 4458
+    msg: 9: [object Event]
+    msg: READY FOR SPEECH: 
+    msg: 13: Audio context resumed
+    msg: 3: Recorder initialized
+    msg: 2: Media stream created
+
+
+    <p style="color: #00deff">Method :</p>
+
+    Check websocket connection -
+      ws.readyState;
+
+    Send blob - 
+      ws.send(item);
+
+    Got response in-
+      ws.onmessage
+
+    Stop streaming -
+      ws.send('{"eof" : 1}');
+  </pre>
+      </div>
+    </div>
+  </div>
+</div>
+	<div class="per-minute-wrap" id="samples">
+      <div class="container">
+      
+        <div class="pricing-flex">
+          <h1 class="pricing-h1">Speech Recognition Samples</h1>
+          <i class="sprite sprite-humonitor"> </i>
+        </div>
+        <style>
+          a {
+            text-decoration: none;
+          }
+        </style>
+        <p>1) Transcription Only<span> - Get Transcription in Stream mode or File Mode ( Usage VoiceBot, Any online conversions) </span><br>
+</p><ul class="product-ul">
+            <li>Plain Transcription Engine
+        </li>
+            <li>Multiple Language option
+        </li>
+
+</ul><p></p>
+			<p>Voice File - Click on Play icon
+			<audio controls>
+			  <source src="./assets/audio/Transcription.mp3" type="audio/mpeg">
+			  <source src="./assets/audio/Transcription.ogg" type="audio/ogg">
+			  Your browser does not support the audio tag.
+			</audio>
+			<br>
+		  <p>
+			Output English - 
+			<h4 class="title-h4">"transcript": Because any task you do , you have to come across problem. Problem should not become the captain of the individual are project chief</h4>
+			</p>
+			
+			<br>
+			 <p>2) ASR with Word Timing <span> - Get ASR on File Mode via WebHook ( Recommanded for Call center 8Khz Mono)  </span><br>
+			</p>
+			<ul class="product-ul">
+					<li>Transcription ASR Engine
+				</li>
+					<li>Multiple Language option
+				</li>
+					<li>Word Score
+				</li>
+					<li>Word Timing
+				</li>
+					<li>Audio Validations
+				</li>
+					<li>Sentence Score
+				</li>
+
+			</ul><p></p>
+			<p>Voice File - Click on Play icon
+			<audio controls>
+			  <source src="./assets/audio/Transcription_Word.mp3" type="audio/mpeg">
+			  <source src="./assets/audio/Transcription_Word.ogg" type="audio/ogg">
+			  Your browser does not support the audio tag.
+			</audio>
+			<br>
+			<br>
+			Output Hindi - 
+			<h4 class="title-h4">[
+                {
+                    "word": "सर",
+                    "start": 0,
+                    "end": 0.33,
+                    "conf": 0.98,
+                                },
+                {
+                    "word": "मेम",
+                    "start": 0.33,
+                    "end": 0.54,
+                    "conf": 1,
+                                    },
+                {
+                    "word": "की",
+                    "start": 0.54,
+                    "end": 0.66,
+                    "conf": 1,
+                }],
+		      "score": 0.96,
+          "transcript": "सर मेम की डेट ऑफ बर्थ जान सकता हू सर मेम की डेट ऑफ बर्थ यहा शो हो रही है , ट्वेन्टि टेन नाईन्टिन एइटी नाईन राईट सर .  यस सर . ऑके मै जान सकता हू सर मेम की मेम सेलरिड पर्सन हैं या सेल्फ ऐम्प्लोईड हैं,"
+	  </h4>
+			</p>
+			<p>
+			Output English - 
+			<h4 class="title-h4">[
+                {
+                    "word": "Sir",
+                    "start": 0,
+                    "end": 0.33,
+                    "conf": 0.98,
+                   
+                },
+                {
+                    "word": "mam",
+                    "start": 0.33,
+                    "end": 0.54,
+                    "conf": 1,
+                    
+                },
+                {
+                    "word": "ki",
+                    "start": 0.54,
+                    "end": 0.66,
+                    "conf": 1,
+                  
+                }],
+                ,
+            "score": 0.96,
+            "transcript": "Sir mam ki date of birth jaan sakata hu sir mam ki date of birth yaha show ho rahi hai , twenty ten nineteen eighty nine right sir. Yes Sir . okay mai jaan sakata hu sir mam ki mam salaried person hai ya self employed hai,"
+      </h4>
+			</p>
+			
+<br>
+       <p>3) ASR with Gender Information <span> - Identify Male Female conversions in Files ( Recommanded for Call center 8Khz Mono)  </span><br>
+      </p>
+      <ul class="product-ul">
+          <li>Transcription ASR Engine
+        </li>
+          <li>Multiple Language option
+        </li>
+          <li>Word Score
+        </li>
+          <li>Word Timing
+        </li>
+          <li>Audio Validations
+        </li>
+         <li>Gender Information
+        </li>
+          <li>Sentence Score
+        </li>
+
+      </ul><p></p>
+      <p>Voice File - Click on Play icon
+      <audio controls>
+        <source src="./assets/audio/ASR_Gender.mp3" type="audio/mpeg">
+        <source src="./assets/audio/ASR_Gender.ogg" type="audio/ogg">
+        Your browser does not support the audio tag.
+      </audio>
+      <br>
+      <br>
+      Output English - 
+      <h4 class="title-h4"> [
+                {
+                    "word": "How",
+                    "start": 0,
+                    "end": 0.3,
+                    "conf": 0.95,
+                    "gender": "male1"
+                },
+                {
+                    "word": "are",
+                    "start": 0.3,
+                    "end": 0.42,
+                    "conf": 0.5,
+                    "gender": "male1"
+                },
+                {
+                    "word": "you",
+                    "start": 1.2,
+                    "end": 1.59,
+                    "conf": 0.85,
+                    "gender": "male1"
+                },
+                {
+                    "word": "Good",
+                    "start": 2.1,
+                    "end": 2.16,
+                    "conf": 0.62,
+                    "gender": "female1"
+                },
+                {
+                    "word": "good",
+                    "start": 2.16,
+                    "end": 2.62,
+                    "conf": 0.33,
+                    "gender": "female1"
+                }],
+          "score": 0.97,
+            "transcript": "How are you , Good good. I receive your contact detail from mister Derby Dorwin in the US .uhmm . I hope this is not a busy time for you , just need a few minuts from my side, that's fine. Okay perfect."
+    </h4>
+      </p>
+      
+      <br>
+       <p>4) Advance ASR Agent/Customer Seperation <span> - Identify Agent Customer conversions in Files ( Recommanded for Call center 8Khz Mono)  </span><br>
+      </p>
+      <ul class="product-ul">
+          <li>Transcription ASR Engine
+        </li>
+          <li>Multiple Language option
+        </li>
+          <li>Word Score
+        </li>
+          <li>Word Timing
+        </li>
+          <li>Audio Validations
+        </li>
+         <li>Speaker Seperation
+        </li>
+          <li>Sentence Score
+        </li>
+
+      </ul><p></p>
+      <p>Voice File - Click on Play icon
+      <audio controls>
+        <source src="./assets/audio/ASR_Agent_Customer.mp3" type="audio/mpeg">
+        <source src="./assets/audio/ASR_Agent_Customer.ogg" type="audio/ogg">
+        Your browser does not support the audio tag.
+      </audio>
+      <br>
+      <br>
+      Output English - 
+      <h4 class="title-h4"> [
+                {
+                    "word": "Sir",
+                    "start": 0,
+                    "end": 0.22,
+                    "conf": 0.36,
+                    "speech": "agent"
+                },
+                {
+                    "word": "PAN",
+                    "start": 0.4,
+                    "end": 0.63,
+                    "conf": 0.97,
+                    "speech": "agent"
+                },
+                {
+                    "word": "card",
+                    "start": 0.63,
+                    "end": 0.81,
+                    "conf": 1,
+                    "speech": "agent"
+                },
+                {
+                    "word": "holder",
+                    "start": 0.81,
+                    "end": 1.08,
+                    "conf": 1,
+                    "speech": "agent"
+                },
+                {
+                    "word": "right",
+                    "start": 1.08,
+                    "end": 1.32,
+                    "conf": 1,
+                    "speech": "agent"
+                },
+                {
+                    "word": "now.",
+                    "start": 1.5,
+                    "end": 1.56,
+                    "conf": 1,
+                    "speech": "agent"
+                },
+                {
+                    "word": "Yes",
+                    "start": 2.3,
+                    "end": 2.52,
+                    "conf": 0.99,
+                    "speech": "customer"
+                },
+                {
+                    "word": "madam,",
+                    "start": 2.52,
+                    "end": 2.82,
+                    "conf": 1,
+                    "speech": "customer"
+                }],
+          "score": 0.94,
+          "transcript": "Sir PAN card holder right now. Yes madam, Okay you have any existing policy from any other company like any kind of life insurance or term insurance policy . yes madam."
+    </h4>
+      </p>
+
+<br>
+       <p>5) Advance ASR Agent/Customer Auto Phrasing <span> - Identify Agent Customer conversions in Files with Auto Phrasing ( Recommanded for Call center 8Khz Mono)  </span><br>
+      </p>
+      <ul class="product-ul">
+           <li>Transcription ASR Engine
+        </li>
+          <li>Multiple Language option
+        </li>
+          <li>Word Score
+        </li>
+          <li>Word Timing
+        </li>
+          <li>Audio Validations
+        </li>
+         <li>Silent-Noise
+        </li>
+        <li>Speaker Seperation
+        </li>
+         <li>NLP
+        </li>
+        <li>Auto Phrasing
+        </li>
+          <li>Sentence Score
+        </li>
+
+      </ul><p></p>
+      <p>Voice File - Click on Play icon
+      <audio controls>
+        <source src="./assets/audio/ASR_Agent_Customer_AutoPhrase.mp3" type="audio/mpeg">
+        <source src="./assets/audio/ASR_Agent_Customer_AutoPhrase.ogg" type="audio/ogg">
+        Your browser does not support the audio tag.
+      </audio>
+      <br>
+      <br>
+      Output Hindi - 
+      <h4 class="title-h4">[
+                {
+                    "word": "ईन्कम",
+                    "start": 8.7,
+                    "end": 8.88,
+                    "conf": 1,
+                    "speech": "agent"
+                },
+                {
+                    "word": "जो",
+                    "start": 8.88,
+                    "end": 9.33,
+                    "conf": 1,
+                    "speech": "agent"
+                },
+                {
+                    "word": "",
+                    "start": 9.33,
+                    "end": 9.5,
+                    "conf": "",
+                    "speech": "silence"
+                },
+                {
+                    "word": "आइटीआर,",
+                    "start": 9.5,
+                    "end": 9.81,
+                    "conf": 1,
+                    "speech": "agent"
+                },
+                {
+                    "word": "",
+                    "start": 9.81,
+                    "end": 12.2,
+                    "conf": "",
+                    "speech": "silence"
+                },
+                {
+                    "word": "कोईभी",
+                    "start": 12.2,
+                    "end": 12.51,
+                    "conf": 0.93,
+                    "speech": "customer"
+                },
+                {
+                    "word": "",
+                    "start": 12.51,
+                    "end": 12.9,
+                    "conf": "",
+                    "speech": "silence"
+                },
+                {
+                    "word": "चलेगा",
+                    "start": 12.9,
+                    "end": 13.02,
+                    "conf": 0.88,
+                    "speech": "customer"
+                },
+                {
+                    "word": "",
+                    "start": 13.02,
+                    "end": 13.5,
+                    "conf": "",
+                    "speech": "silence"
+                },
+                {
+                    "word": "सेलरि",
+                    "start": 13.5,
+                    "end": 13.8,
+                    "conf": 1,
+                    "speech": "customer"
+                }],
+          "score": 0.97,
+            "transcript": "ठीक है कोई ईश्यू नहीं है. आप मतलब सेलरि. जो. आप प्लान को प्रोसिड करेंगे. तो सेलरि प्रूफ के तौर पे सेलरि स्लिप देना चाहेंगे या फिर ईन्कम जो आइटीआर, कोई भी चलेगा सेलरि स्लिप भी है, आइटीआर भी है, ठीक है तो मैं आपकी ना ईन्कम कन्सिडर कर लेता हू सर , एइटी थाऊझन्ड . जोकि यर्लि हो जाती है नाईन लाख सिक्सटी थाऊझन्ड तो. सेलरि स्लिप आप प्रोवाईड करा दीजिएगा."
+            "speaker_diarization": [
+                {
+                    "transcript": "आप प्लान को प्रोसिड करेंगे. तो सेलरि प्ॠफ के तौर पे सेलरि स्लिप देना चाहेंगे या फिर ईन्कम जो आइटीआर,",
+                    "start": 3.24,
+                    "end": 9.81,
+                    "conf": 0.99,
+                    "speech": "agent"
+                },
+                {
+                    "transcript": "कोई भी चलेगा सेलरि स्लिप भी है, आइटीआर भी है,",
+                    "start": 9.81,
+                    "end": 15.12,
+                    "conf": 0.97,
+                    "speech": "customer"
+                }]
+    </h4>
+      </p>
+      <p>
+      Output English - 
+      <h4 class="title-h4">[
+                {
+                    "word": "income",
+                    "start": 8.7,
+                    "end": 8.88,
+                    "conf": 1,
+                    "speech": "agent"
+                },
+                {
+                    "word": "jo",
+                    "start": 8.88,
+                    "end": 9.33,
+                    "conf": 1,
+                    "speech": "agent"
+                },
+                {
+                    "word": "",
+                    "start": 9.33,
+                    "end": 9.5,
+                    "conf": "",
+                    "speech": "silence"
+                },
+                {
+                    "word": "ITR,",
+                    "start": 9.5,
+                    "end": 9.81,
+                    "conf": 1,
+                    "speech": "agent"
+                },
+                {
+                    "word": "",
+                    "start": 9.81,
+                    "end": 12.2,
+                    "conf": "",
+                    "speech": "silence"
+                },
+                {
+                    "word": "Koibhi",
+                    "start": 12.2,
+                    "end": 12.51,
+                    "conf": 0.93,
+                    "speech": "customer"
+                },
+                {
+                    "word": "",
+                    "start": 12.51,
+                    "end": 12.9,
+                    "conf": "",
+                    "speech": "silence"
+                },
+                {
+                    "word": "chalega",
+                    "start": 12.9,
+                    "end": 13.02,
+                    "conf": 0.88,
+                    "speech": "customer"
+                },
+                {
+                    "word": "",
+                    "start": 13.02,
+                    "end": 13.5,
+                    "conf": "",
+                    "speech": "silence"
+                },
+                {
+                    "word": "salary",
+                    "start": 13.5,
+                    "end": 13.8,
+                    "conf": 1,
+                    "speech": "customer"
+                }],
+          "score": 0.97,
+           "transcript": "Thhik hai koi issue nahi hai. Aap matalab salary. jo. aap plan ko proceed karenge. To salary proof ke taur pe salary slip dena chaahenge ya fir income jo ITR, Koibhi chalega salary slip bhi hai, ITR bhi hai, Thhik hai to mai aapaki na income consider kar leta hu sir eighty thousand .  joki yearly ho jaati hai nine lakh sixty thousand to. salary slip aap provide kara dijiega."
+            "speaker_diarization": [{
+                    "transcript": "Aap plan ko proceed karenge. To salary proof ke taur pe salary slip dena chaahenge ya fir income jo ITR,",
+                    "start": 3.24,
+                    "end": 9.81,
+                    "conf": 0.99,
+                    "speech": "agent"
+                },
+                {
+                    "transcript": "Koibhi chalega salary slip bhi hai, ITR bhi hai,",
+                    "start": 9.81,
+                    "end": 15.12,
+                    "conf": 0.97,
+                    "speech": "customer"
+                }]
+      </h4>
+      </p>
+      
+
+      </div>
+    </div>
+	
+	<div class="per-minute-wrap" id="price">
+      <div class="container">
+        <div class="pricing-flex">
+          <h1 class="pricing-h1">Pricing</h1>
+          <i class="sprite sprite-price-icon wow zoomIn slow animated" style="visibility: visible; animation-name: zoomIn;"></i>
+        </div>
+        <style>
+          a {
+            text-decoration: none;
+          }
+        </style>
+        <p>
+          Pay Per Agent per Month -
+          <span>Better Accuracy than other provider at 1/3 Price</span><br>
+<ul class="product-ul">
+            <li>Rather than paying per Minute or Hour (Way Costly on Google,Microsoft,Amazon) , Pay simple price per Agent , Unlimited hours  per Agent (Price under 99$ per Agent per Month - Flat Montly rate - unlimited usage) , Connnect us for bulk discount
+        </li></ul></p>
+        <p>
+          with Analysis? –
+          <a href="index.html#contact-us"><span>Contact Us</span></a><br>
+          Without Analysis (Transcription Only)? –
+          <a href="index.html#contact-us" text-decoration="none"><span>Contact Us</span></a>
+        </p>
+      </div>
+    </div>
+<footer id="contact-us">
+  <div class="container">
+    <div class="contact-flex">
+      <h2 class="title-h2"> Contact us </h2>
+      <div class="letter-image wow zoomIn slow">
+        <div class="animated-mail">
+          <div class="back-fold"></div>
+          <div class="letter">
+            <div class="letter-border"></div>
+            <div class="letter-title"></div>
+            <div class="letter-context"></div>
+            <div class="letter-stamp">
+              <div class="letter-stamp-inner"></div>
+            </div>
+          </div>
+          <div class="top-fold"></div>
+          <div class="body"></div>
+          <div class="left-fold"></div>
+        </div>
+        <div class="shadow"></div>
+      </div>
+    </div>
+    <h4 class="title-h4"> VSpeech is an AI company focussed on empowering businesses through AI
+      powered automation. </h4>
+    <div class="contact-wrap">
+      <div class="contact-us"> <a href="index.html" class="footer-logo"> <i class="sprite sprite-footer-logo"></i
+            ></a>
+        <ul>
+          <li> <i class="sprite sprite-mail"></i> <a href="mailto:info@vspeech.ai">Info@vspeech.ai</a> </li>
+          <li> <i class="sprite sprite-phone"></i> <a href="tel:07940039220">07940039220</a> </li>
+          <li> <i class="sprite sprite-address"></i> <span> 604, Elite Tower, Near Sapath Hexa,<br />
+            Kargil petrol pump, S G Highway, Ahmedabad - 380060</span
+                > </li>
+        </ul>
+      </div>
+      <div class="links-wrap">
+        <h5>Links</h5>
+        <ul>
+          <li><a href="#banner">Speech to text Demo</a></li>
+          <li><a href="ASR.html">Speech Recognition</a></li>
+          <li><a href="VoiceAnalysis.html">Voice Biomatic</a></li>
+          <li><a href="VoiceAnalysis.html">Noise Cancellation</a></li>
+          <li><a href="voicebot.html">VoiceBot</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="index.html#solutions">What we do?</a></li>
+          <li><a href="FAQ.html">FAQ</a></li>
+          <li><a href="https://indiantts.com/">TTS AI Voice</a></li>
+        </ul>
+      </div>
+    </div>
+	        <div style="width: 100%;color: white;">
+          <h4 style="text-align: center;">Vspeech.ai - Manage by <a href="https://indiantts.com/" target="_blank" style="text-decoration: none;color: #00deff;"><span>IndianTTS</span></a> Company.</h4>
+          <!-- <h4 style="text-align: center;">Copyright © 2020 Indian Text to Speech Pvt Ltd, All Rights Reserved.<h4> -->
+        </div>
+
+  </div>
+</footer>
+<div class="bottom-to-top"> <i>▲</i> </div>
+<link rel="stylesheet" href="assets/css/normalize.css" />
+<link rel="stylesheet" href="assets/css/animate.css" />
+<link rel="stylesheet" href="assets/css/style.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+<script src="assets/js/wow.min.js" async defer></script>
+<script src="assets/js/scripts.js" async defer></script>
+</body>
+</html>
