@@ -1794,7 +1794,7 @@ pre {
 }
 
 /* Feature Block */
-.feature-block {
+.feature-block-inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1883,6 +1883,19 @@ pre {
 .top-sector div p {
   font-size: 18px;
   line-height: 30px;
+}
+
+.voiceBot-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.voiceBot-right {
+  -webkit-box-flex: 40%;
+      -ms-flex: 40%;
+          flex: 40%;
+  padding-left: 50px;
 }
 
 /* Responsive Media Queries */

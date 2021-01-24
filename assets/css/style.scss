@@ -1845,7 +1845,7 @@ pre {
 
 /* Feature Block */
 
-.feature-block {
+.feature-block-inner {
   display: flex;
   flex-direction: row;
   padding-bottom: 40px;
@@ -1901,6 +1901,13 @@ pre {
       line-height: 30px;
     }
   }
+}
+.voiceBot-top {
+  display: flex;
+}
+.voiceBot-right {
+  flex: 40%;
+  padding-left: 50px;
 }
 
 /* Responsive Media Queries */
