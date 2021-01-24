@@ -772,7 +772,8 @@ nav li a:hover, nav li a:focus, nav li a:active, nav li a.active {
 #solutions,
 #features,
 #boost-business,
-footer {
+footer,
+.analysis-features {
   padding: 60px 0;
 }
 
@@ -1129,7 +1130,15 @@ footer {
   color: #00deff;
 }
 
+.default-color {
+  color: #00deff;
+}
+
 .analysis-features .title-h2 {
+  color: #fff;
+}
+
+.analysis-features .title-h3 {
   color: #fff;
 }
 
@@ -1141,7 +1150,7 @@ footer {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
-  padding: 90px 50px 0 50px;
+  padding: 30px 50px 0 50px;
 }
 
 .boost-blocks-wrap.inner-page {
@@ -1166,7 +1175,7 @@ footer {
 .boost-block {
   background-color: #132d45;
   text-align: center;
-  padding: 45px 42px;
+  padding: 40px;
   border-radius: 10px;
   -webkit-box-flex: 33.33%;
   -ms-flex: 33.33%;
@@ -1189,7 +1198,8 @@ footer {
 .boost-block .title-h4 {
   color: #fff;
   font-size: 1.5rem;
-  padding: 40px 0;
+  padding: 20px 0 0;
+  margin-bottom: 10px;
 }
 
 .boost-block p {
@@ -1783,6 +1793,64 @@ pre {
   display: block;
 }
 
+/* Feature Block */
+.feature-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding-bottom: 40px;
+}
+
+.feature-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 81.45px;
+  border: 1px solid #00deff;
+  border-radius: 50%;
+  -webkit-box-flex: 15%;
+      -ms-flex: 15%;
+          flex: 15%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #00deff;
+}
+
+.feature-icon svg {
+  height: 30px;
+  width: 30px;
+}
+
+.feature-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 85%;
+      -ms-flex: 85%;
+          flex: 85%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 30px;
+}
+
+.feature-content h5 {
+  font-size: 1.4rem;
+}
+
+.feature-content p {
+  color: #fff;
+}
+
 /* Responsive Media Queries */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   #banner {
@@ -2283,6 +2351,7 @@ pre {
     width: 100%;
   }
 }
+
 .spinner {
   height: 40px;
   text-align: center;
