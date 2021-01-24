@@ -1909,6 +1909,10 @@ pre {
 .voiceBot-top {
   display: flex;
 }
+.voiceBot-left {
+  flex: 60%;
+  padding-left: 50px;
+}
 .voiceBot-right {
   flex: 40%;
   padding-left: 50px;

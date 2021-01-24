@@ -1895,6 +1895,13 @@ pre {
   display: flex;
 }
 
+.voiceBot-left {
+  -webkit-box-flex: 60%;
+      -ms-flex: 60%;
+          flex: 60%;
+  padding-left: 50px;
+}
+
 .voiceBot-right {
   -webkit-box-flex: 40%;
       -ms-flex: 40%;
