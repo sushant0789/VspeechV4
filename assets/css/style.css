@@ -1851,6 +1851,40 @@ pre {
   color: #fff;
 }
 
+.top-sector {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 40px 0 0;
+}
+
+.top-sector div {
+  width: 33.33%;
+  padding: 35px 20px;
+  color: #fff;
+  text-align: center;
+  background-color: #132d45;
+  border-radius: 10px;
+}
+
+.top-sector div:nth-child(3n + 2) {
+  margin: 0 40px;
+}
+
+.top-sector div h3 {
+  color: #00deff;
+  font-size: 42px;
+  padding: 0 0 10px;
+}
+
+.top-sector div p {
+  font-size: 18px;
+  line-height: 30px;
+}
+
 /* Responsive Media Queries */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   #banner {
