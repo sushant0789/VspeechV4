@@ -344,7 +344,7 @@ nav {
 }
 
 .banner-content {
-  padding: 3rem 0 7rem;
+  padding: 3rem 0 5rem;
 
   h1 {
     font-size: 3.7rem;
@@ -804,7 +804,8 @@ nav {
 #features,
 #boost-business,
 footer,
-.analysis-features {
+.analysis-features,
+.voiceBot-working-wrap {
   padding: 60px 0;
 }
 
@@ -1852,10 +1853,10 @@ pre {
 }
 .feature-icon {
   display: flex;
-  height: 81.45px;
+  height: 87.35px;
   border: 1px solid #00deff;
   border-radius: 50%;
-  flex: 15%;
+  flex: 14%;
   align-items: center;
   justify-content: center;
   color: #00deff;
@@ -1866,14 +1867,17 @@ pre {
 }
 .feature-content {
   display: flex;
-  flex: 85%;
+  flex: 86%;
   flex-direction: column;
   padding: 0 30px;
   h5 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+    color: #00deff;
+    padding: 0 0 10px;
   }
   p {
     color: #fff;
+    line-height: 30px;
   }
 }
 
@@ -1908,6 +1912,36 @@ pre {
 .voiceBot-right {
   flex: 40%;
   padding-left: 50px;
+}
+.voiceBot-working {
+  display: flex;
+}
+.voiceBot-working-left {
+  flex: 55%;
+  h2 {
+    color: #fff;
+  }
+  ol {
+    padding: 0 0 0 20px;
+    margin: 0;
+    li {
+      color: #fff;
+      font-size: 18px;
+      line-height: 24px;
+      padding: 0 0 15px;
+    }
+  }
+}
+.voiceBot-working-wrap {
+  h2 {
+    color: #fff;
+  }
+}
+.voiceBot-working-right {
+  flex: 45%;
+  img {
+    max-width: 100%;
+  }
 }
 
 /* Responsive Media Queries */

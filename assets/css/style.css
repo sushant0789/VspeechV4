@@ -327,7 +327,7 @@ nav li a:hover, nav li a:focus, nav li a:active, nav li a.active {
 }
 
 .banner-content {
-  padding: 3rem 0 7rem;
+  padding: 3rem 0 5rem;
 }
 
 .banner-content h1 {
@@ -773,7 +773,8 @@ nav li a:hover, nav li a:focus, nav li a:active, nav li a.active {
 #features,
 #boost-business,
 footer,
-.analysis-features {
+.analysis-features,
+.voiceBot-working-wrap {
   padding: 60px 0;
 }
 
@@ -1809,12 +1810,12 @@ pre {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 81.45px;
+  height: 87.35px;
   border: 1px solid #00deff;
   border-radius: 50%;
-  -webkit-box-flex: 15%;
-      -ms-flex: 15%;
-          flex: 15%;
+  -webkit-box-flex: 14%;
+      -ms-flex: 14%;
+          flex: 14%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1833,9 +1834,9 @@ pre {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 85%;
-      -ms-flex: 85%;
-          flex: 85%;
+  -webkit-box-flex: 86%;
+      -ms-flex: 86%;
+          flex: 86%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1844,11 +1845,14 @@ pre {
 }
 
 .feature-content h5 {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
+  color: #00deff;
+  padding: 0 0 10px;
 }
 
 .feature-content p {
   color: #fff;
+  line-height: 30px;
 }
 
 .top-sector {
@@ -1896,6 +1900,48 @@ pre {
       -ms-flex: 40%;
           flex: 40%;
   padding-left: 50px;
+}
+
+.voiceBot-working {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.voiceBot-working-left {
+  -webkit-box-flex: 55%;
+      -ms-flex: 55%;
+          flex: 55%;
+}
+
+.voiceBot-working-left h2 {
+  color: #fff;
+}
+
+.voiceBot-working-left ol {
+  padding: 0 0 0 20px;
+  margin: 0;
+}
+
+.voiceBot-working-left ol li {
+  color: #fff;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 0 0 15px;
+}
+
+.voiceBot-working-wrap h2 {
+  color: #fff;
+}
+
+.voiceBot-working-right {
+  -webkit-box-flex: 45%;
+      -ms-flex: 45%;
+          flex: 45%;
+}
+
+.voiceBot-working-right img {
+  max-width: 100%;
 }
 
 /* Responsive Media Queries */
