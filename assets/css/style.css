@@ -774,7 +774,8 @@ nav li a:hover, nav li a:focus, nav li a:active, nav li a.active {
 #boost-business,
 footer,
 .analysis-features,
-.voiceBot-working-wrap {
+.voiceBot-working-wrap,
+.problem-solution {
   padding: 60px 0;
 }
 
@@ -1855,6 +1856,19 @@ pre {
   line-height: 30px;
 }
 
+.feature-block-inner.reasons .feature-icon {
+  -webkit-box-flex: 8%;
+      -ms-flex: 8%;
+          flex: 8%;
+  height: 91.2px;
+}
+
+.feature-block-inner.reasons .feature-content {
+  -webkit-box-flex: 92%;
+      -ms-flex: 92%;
+          flex: 92%;
+}
+
 .top-sector {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1949,6 +1963,184 @@ pre {
 
 .voiceBot-working-right img {
   max-width: 100%;
+}
+
+.problem-solution h2.title-h2 {
+  color: #fff;
+  padding: 0 0 50px;
+}
+
+.main-timeline {
+  position: relative;
+  padding: 50px 0;
+}
+
+.main-timeline:before {
+  content: "";
+  height: 100%;
+  width: 1px;
+  border-left: 3px dashed #fff;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  left: 50%;
+  top: 0;
+}
+
+.main-timeline .timeline {
+  padding-left: 52px;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.main-timeline .timeline:before {
+  content: "";
+  height: 25px;
+  width: 25px;
+  background-color: red;
+  border-radius: 50%;
+  border: 5px solid #b10101;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  z-index: -1;
+}
+
+.main-timeline .timeline:after {
+  content: "";
+  height: 25px;
+  width: 25px;
+  background-color: #ffac3a;
+  border-radius: 50%;
+  border: 5px solid #fec93f;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  z-index: -1;
+  background-color: red;
+  height: 35px;
+  width: 35px;
+  border: none;
+  border-radius: 0;
+  -webkit-transform: translateX(0) translateY(-50%) rotate(45deg);
+          transform: translateX(0) translateY(-50%) rotate(45deg);
+  left: 40.5%;
+}
+
+.main-timeline .timeline-content {
+  color: #000;
+  background-color: #fff;
+  width: 40%;
+  border-radius: 10px;
+  display: block;
+  position: relative;
+}
+
+.main-timeline .timeline-content:hover {
+  text-decoration: none;
+}
+
+.main-timeline .title {
+  color: #fff;
+  background-color: red;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 15px 20px;
+  margin: 0;
+  border-radius: 10px 10px 0 0;
+}
+
+.main-timeline .description {
+  font-size: 15px;
+  letter-spacing: 1px;
+  padding: 20px;
+  margin: 0;
+}
+
+.main-timeline .timeline:nth-child(even) {
+  padding-left: 0;
+  padding-right: 52px;
+}
+
+.main-timeline .timeline:nth-child(even):after {
+  left: auto;
+  right: 40.5%;
+  top: 21%;
+  background-color: green;
+}
+
+.main-timeline .timeline:nth-child(even) .timeline-content {
+  float: right;
+}
+
+.main-timeline .timeline:nth-child(even):before {
+  background-color: green;
+  border: 5px solid #015301;
+}
+
+.main-timeline .timeline:nth-child(even) .title {
+  background-color: green;
+}
+
+@media screen and (max-width: 990px) {
+  .main-timeline .timeline:after {
+    left: 40%;
+  }
+  .main-timeline .timeline:nth-child(even):after {
+    right: 40%;
+  }
+  .main-timeline .timeline:nth-child(even) .timeline-content {
+    width: 39%;
+  }
+  .main-timeline .timeline-content {
+    width: 39%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .main-timeline:before {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    left: 0;
+  }
+  .main-timeline .timeline {
+    padding: 40px 10px 0 30px;
+    margin-bottom: 10px;
+  }
+  .main-timeline .timeline:nth-child(even) {
+    padding: 40px 10px 0 30px;
+    margin-bottom: 10px;
+  }
+  .main-timeline .timeline:before {
+    -webkit-transform: translateX(0) translateY(-50%);
+            transform: translateX(0) translateY(-50%);
+    left: -11px;
+    top: 30%;
+  }
+  .main-timeline .timeline:nth-child(even):after, .main-timeline .timeline:after {
+    left: 28px;
+    top: 30%;
+  }
+  .main-timeline .timeline:nth-child(even) .timeline-content {
+    width: 100%;
+  }
+  .main-timeline .timeline-content {
+    width: 100%;
+  }
+  .main-timeline .title {
+    font-size: 20px;
+  }
+  .main-timeline .timeline:nth-child(even) .description,
+  .main-timeline .description {
+    padding: 15px 20px;
+  }
 }
 
 /* Responsive Media Queries */
