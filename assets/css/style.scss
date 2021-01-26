@@ -254,13 +254,19 @@ ul.product-ul li::before {
   background-position: -1px -488px;
 }
 
-.sprite-speak-noise {
+.sprite-noise-cancellation {
+  width: 75px;
+  height: 79px;
+  background-position: -394px -576px;
+}
+
+.sprite-listen-noise {
   width: 57px;
   height: 75px;
   background-position: -243px -490px;
 }
 
-.sprite-listen-noise {
+.sprite-speak-noise {
   width: 75px;
   height: 79px;
   background-position: -390px -490px;
@@ -270,6 +276,12 @@ ul.product-ul li::before {
   width: 75px;
   height: 57px;
   background-position: -3px -572px;
+}
+
+.sprite-voice-bot2 {
+  width: 75px;
+  height: 57px;
+  background-position: -343px -659px;
 }
 
 .sprite-works-everywhere {
@@ -292,8 +304,14 @@ ul.product-ul li::before {
 
 .sprite-recognize-speaker {
   width: 75px;
-  height: 75px;
+  height: 65px;
   background-position: -156px -490px;
+}
+
+.sprite-voice-biomatic {
+  width: 75px;
+  height: 65px;
+  background-position: -86px -729px;
 }
 
 .sprite-speaker {
@@ -323,7 +341,7 @@ ul.product-ul li::before {
 .sprite-communication {
   width: 70px;
   height: 75px;
-  background-position: -326px -575px;
+  background-position: -322px -575px;
 }
 
 .sprite-converstation-search {
@@ -348,6 +366,12 @@ ul.product-ul li::before {
   width: 75px;
   height: 66px;
   background-position: -4px -655px;
+}
+
+.sprite-ai-voices {
+  width: 75px;
+  height: 66px;
+  background-position: -4px -725px;
 }
 
 .sprite-timestamp-generation {
@@ -656,7 +680,6 @@ nav {
   flex: 100%;
   position: relative;
   z-index: 1;
-  top: -30px;
 
   .btn {
     margin-right: 1rem;
@@ -2658,9 +2681,13 @@ pre {
   .analysis-features .col-6 {
     width: 100%;
   }
-  .feature-icon {
+  .feature-icon,
+  .feature-block-inner.reasons .feature-icon {
     width: 75px;
     height: 75px;
+  }
+  .feature-block-inner {
+    padding: 0 0 20px;
   }
   .feature-content {
     padding: 0 10px 0 95px;
@@ -2672,9 +2699,45 @@ pre {
     flex-direction: column;
     p {
       width: 100%;
-      padding: 20px;
+      padding: 15px;
       margin: 0;
     }
+  }
+  .voiceBot-working,
+  .top-sector {
+    flex-direction: column;
+  }
+  .top-sector div {
+    width: 100%;
+    &:nth-child(3n + 2) {
+      margin: 25px 0;
+    }
+  }
+  .voiceBot-working-left ol {
+    padding: 0 0 30px 20px;
+    li {
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+  .analysis-features .row.my-5 .col-3 {
+    display: none;
+  }
+  .analysis-features .row.my-5 .col-2 {
+    width: 100%;
+    text-align: center;
+    padding: 0 0 20px;
+  }
+  .productsBox a.boost-block {
+    flex: 100%;
+    max-width: 100%;
+    margin: 10px 0;
+    &:nth-child(even) {
+      margin: 20px 0;
+    }
+  }
+  .voiceBotCard span {
+    margin-top: 0;
   }
 }
 
@@ -2792,10 +2855,14 @@ pre {
   }
 
   .collector {
-    padding: 0 0 18px 75px;
+    padding: 0 0 18px 80px;
 
     h3 {
       padding: 0 0 8px;
+      span {
+        font-size: 16px;
+        padding-left: 20px;
+      }
     }
 
     .collector-inner {
@@ -2821,7 +2888,10 @@ pre {
   #solutions,
   #features,
   #boost-business,
-  footer {
+  footer,
+  .analysis-features,
+  .voiceBot-working-wrap,
+  .problem-solution {
     padding: 30px 0;
   }
 
@@ -2873,7 +2943,7 @@ pre {
     margin: 0 0 25px;
     min-height: auto;
 
-    &:nth-child(-n + 6) {
+    &:nth-child(-n + 10) {
       right: auto;
       left: auto;
       top: auto;
@@ -2945,8 +3015,6 @@ pre {
   }
 
   #banner.product-banner {
-    padding-bottom: 4rem;
-
     .banner-content h1.pricing-h1 {
       margin: 2.2rem 0 0;
     }
@@ -2980,59 +3048,42 @@ pre {
   }
 
   .sprite.sprite-gold-bar,
-  ul.product-ul li.sprite-gold-bar::before {
-    background-position: -151px -91px;
-    width: 39.5px;
-    height: 31.5px;
-    background-size: 235.5px 243.5px;
-  }
-
   .sprite.sprite-collector,
-  ul.product-ul li.sprite-collector::before {
-    background-position: -224px -1px;
-    width: 60.75px;
-    height: 55.5px;
-    background-size: 353.25px 365.25px;
-  }
-
   .sprite.sprite-humonitor,
-  ul.product-ul li.sprite-humonitor::before {
-    background-position: -142px -177px;
-    width: 60.75px;
-    height: 45px;
-    background-size: 353.25px 365.25px;
-  }
-
   .sprite.sprite-advisor,
-  ul.product-ul li.sprite-advisor::before {
-    background-position: -165px -1px;
-    width: 57.75px;
-    height: 57px;
-    background-size: 353.25px 365.25px;
-  }
-
-  .sprite.sprite-left-arrows,
-  ul.product-ul li.sprite-left-arrows::before {
-    background-position: -286px -1px;
-    width: 57px;
-    height: 249.75px;
-    background-size: 353.25px 365.25px;
-  }
-
   .sprite.sprite-product-tick,
-  ul.product-ul li::before {
-    background-position: -1px -117px;
-    width: 15.75px;
-    height: 15.75px;
-    background-size: 353.25px 365.25px;
+  .sprite.sprite-product-avatar,
+  .sprite.sprite-left-arrows {
+    -moz-transform: scale(0.85) translateX(0) translateY(-15%);
+    zoom: 0.85;
+    zoom: 85%;
+    left: -10px;
+    top: 10px;
+    position: absolute;
+  }
+  .sprite-speech-text {
+    -moz-transform: scale(0.6) translateX(0) translateY(-35%);
+    zoom: 0.6;
+    zoom: 60%;
+    position: absolute;
+    top: auto;
+    margin: 10px 0 0;
+  }
+  .videoWrapper {
+    margin: 20px 0;
+  }
+  .top-sector div h3 {
+    font-size: 30px;
+  }
+  .voiceBot-left h2.title-h2 {
+    position: relative;
+  }
+  .sprite.sprite-left-arrows {
+    top: 25px;
   }
 
-  .sprite.sprite-product-avatar,
-  ul.product-ul li.sprite-product-avatar::before {
-    background-position: -6px -192px;
-    width: 103.5px;
-    height: 71.25px;
-    background-size: 353.25px 365.25px;
+  .vs-collector {
+    margin-bottom: 15px;
   }
 
   #faq {
