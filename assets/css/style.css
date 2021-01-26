@@ -455,13 +455,13 @@ nav li a:hover, nav li a:focus, nav li a:active, nav li a.active {
 }
 
 .banner-content {
-  padding: 3rem 0 5rem;
+  padding: 2rem 0 5rem;
 }
 
 .banner-content h1 {
-  font-size: 3.7rem;
+  font-size: 3.2rem;
   color: #fff;
-  margin: 0 0 2.3rem;
+  margin: 0 0 1.8rem;
 }
 
 .banner-main-content {
