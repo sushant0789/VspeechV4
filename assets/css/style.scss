@@ -248,6 +248,108 @@ ul.product-ul li::before {
   background-position: -252px -426px;
 }
 
+.sprite-solution {
+  width: 75px;
+  height: 75px;
+  background-position: -1px -488px;
+}
+
+.sprite-speak-noise {
+  width: 57px;
+  height: 75px;
+  background-position: -243px -490px;
+}
+
+.sprite-listen-noise {
+  width: 75px;
+  height: 79px;
+  background-position: -390px -490px;
+}
+
+.sprite-voice-bot {
+  width: 75px;
+  height: 57px;
+  background-position: -3px -572px;
+}
+
+.sprite-works-everywhere {
+  width: 75px;
+  height: 75px;
+  background-position: -84px -560px;
+}
+
+.sprite-most-secure {
+  width: 75px;
+  height: 75px;
+  background-position: -306px -490px;
+}
+
+.sprite-biomatic {
+  width: 75px;
+  height: 75px;
+  background-position: -252px -426px;
+}
+
+.sprite-recognize-speaker {
+  width: 75px;
+  height: 75px;
+  background-position: -156px -490px;
+}
+
+.sprite-speaker {
+  width: 75px;
+  height: 59px;
+  background-position: -80px -492px;
+}
+
+.sprite-multilingual2 {
+  width: 75px;
+  height: 75px;
+  background-position: -163px -562px;
+}
+
+.sprite-human-agent {
+  width: 75px;
+  height: 75px;
+  background-position: -243px -575px;
+}
+
+.sprite-noise-reduction {
+  width: 75px;
+  height: 54px;
+  background-position: -313px -436px;
+}
+
+.sprite-communication {
+  width: 70px;
+  height: 75px;
+  background-position: -326px -575px;
+}
+
+.sprite-converstation-search {
+  width: 75px;
+  height: 66px;
+  background-position: -258px -656px;
+}
+
+.sprite-support-calls {
+  width: 75px;
+  height: 75px;
+  background-position: -168px -646px;
+}
+
+.sprite-customize-reports {
+  width: 75px;
+  height: 71px;
+  background-position: -88px -652px;
+}
+
+.sprite-speech-text {
+  width: 75px;
+  height: 66px;
+  background-position: -4px -655px;
+}
+
 .sprite-timestamp-generation {
   width: 39px;
   height: 41px;
@@ -1302,6 +1404,7 @@ footer {
       i {
         position: absolute;
         left: 0;
+        top: 3px;
       }
 
       a {
@@ -2109,6 +2212,11 @@ pre {
       height: auto;
     }
   }
+}
+
+.padding-top10 {
+  top: 10px;
+  position: relative;
 }
 
 /******* problem solution timeline *******/
