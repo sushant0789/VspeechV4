@@ -2472,7 +2472,10 @@ pre {
             justify-content: space-between;
   }
   nav ul li a {
-    padding: 0 12px 30px;
+    padding: 0 10px 30px;
+  }
+  .voiceBotCard span {
+    font-size: 36px;
   }
   #partner-vspeech,
   #solutions,
