@@ -1015,6 +1015,11 @@ footer,
   color: #a2a6aa;
 }
 
+.condition p a {
+  color: #00deff;
+  text-decoration: none;
+}
+
 /* solutions section */
 .solutions-blocks-wrap {
   position: relative;
@@ -2964,13 +2969,28 @@ pre {
   .sprite.sprite-advisor,
   .sprite.sprite-product-tick,
   .sprite.sprite-product-avatar,
-  .sprite.sprite-left-arrows {
+  .sprite.sprite-left-arrows,
+  .sprite-speak-noise,
+  .sprite-listen-noise,
+  .sprite-works-everywhere,
+  .sprite-speaker,
+  .sprite-recognize-speaker,
+  .sprite-most-secure,
+  .sprite-multilingual2,
+  .sprite-solution,
+  .sprite-human-agent,
+  .sprite-voice-bot {
     -moz-transform: scale(0.85) translateX(0) translateY(-15%);
     zoom: 0.85;
     zoom: 85%;
     left: -10px;
     top: 10px;
     position: absolute;
+  }
+  .sprite-voice-bot {
+    left: auto;
+    margin: 0 0 0 10px;
+    top: auto;
   }
   .sprite-speech-text {
     -moz-transform: scale(0.6) translateX(0) translateY(-35%);
@@ -2986,7 +3006,8 @@ pre {
   .top-sector div h3 {
     font-size: 30px;
   }
-  .voiceBot-left h2.title-h2 {
+  .voiceBot-left h2.title-h2,
+  .voiceBot-left h1 {
     position: relative;
   }
   .sprite.sprite-left-arrows {
