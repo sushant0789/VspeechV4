@@ -421,7 +421,7 @@ header {
   }
 
   .logo {
-    padding: 22px 0;
+    padding: 20px 0 15px;
   }
 }
 
@@ -436,7 +436,7 @@ header {
 
 .container {
   padding: 0 15px;
-  max-width: 1170px;
+  max-width: 1170px !important;
   width: 100%;
   margin: auto;
 }
@@ -446,6 +446,8 @@ nav {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
+    padding: 0;
+    margin: 0;
   }
 
   li {
@@ -967,8 +969,7 @@ footer,
 
 .partner-block {
   width: 340px;
-  height: 405px;
-  padding: 0 30px;
+  padding: 0 30px 30px;
   border-radius: 10px;
   -webkit-box-shadow: 0px 5px 11.04px 0.96px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 5px 11.04px 0.96px rgba(0, 0, 0, 0.1);
@@ -1420,7 +1421,7 @@ footer {
   flex: 70%;
 
   ul {
-    padding: 25px 0 0;
+    padding: 25px 25px 25px 0;
 
     li {
       list-style: none;
@@ -2450,9 +2451,53 @@ pre {
   #banner {
     background-size: cover;
   }
+  header {
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  .toggle-menu {
+    display: none;
+  }
 
-  nav ul li a {
-    padding: 0 15px 30px 15px;
+  nav {
+    width: 100%;
+    ul {
+      width: 100%;
+      justify-content: space-between;
+      li a {
+        padding: 0 12px 30px;
+      }
+    }
+  }
+  #partner-vspeech,
+  #solutions,
+  #features,
+  #boost-business,
+  footer,
+  .analysis-features,
+  .voiceBot-working-wrap,
+  .problem-solution {
+    padding: 40px 0;
+  }
+
+  .voiceBot-right {
+    padding-left: 20px;
+  }
+  .collector {
+    padding: 0 0 50px 95px;
+    h3 {
+      padding: 0;
+    }
+  }
+
+  .banner-content {
+    padding: 3rem 0;
+    h1 {
+      font-size: 3rem;
+    }
   }
 
   .banner-left-content {
@@ -2488,7 +2533,7 @@ pre {
   }
 
   .collector {
-    padding-bottom: 35px;
+    padding-bottom: 20px;
 
     p {
       line-height: 1.7rem;
@@ -2504,13 +2549,29 @@ pre {
   }
 
   .partner-block {
-    height: auto;
     width: 33.33%;
-    padding-bottom: 30px;
+    &:nth-child(even) {
+      margin: 0 20px;
+    }
+  }
+  .top-sector div {
+    padding: 20px;
+    h3 {
+      font-size: 32px;
+    }
+    p {
+      line-height: 27px;
+    }
+    &:nth-child(even) {
+      margin: 0 20px;
+    }
+  }
+  .productsBox a.boost-block:nth-child(even) {
+    margin: 0 20px;
   }
 
   .boost-blocks-wrap {
-    padding: 50px 15px 0 15px;
+    padding: 40px 15px 0 15px;
   }
 
   .boost-block:nth-child(3n + 2) {
@@ -2603,6 +2664,18 @@ pre {
 }
 
 @media (min-width: 768px) and (max-width: 1112px) and (orientation: landscape) {
+  nav ul {
+    padding: 0;
+  }
+  nav li a {
+    padding: 0 12px 30px;
+  }
+  .partner-block {
+    width: 33.33%;
+    &:nth-child(even) {
+      margin: 0 20px;
+    }
+  }
   .cta .btn {
     width: 35%;
   }
@@ -2628,6 +2701,15 @@ pre {
     &:nth-child(6) {
       right: 60px;
     }
+  }
+  .voiceBot-right {
+    padding-left: 30px;
+  }
+  .collector {
+    padding: 0 0 50px 90px;
+  }
+  .boost-blocks-wrap {
+    padding: 30px 15px 0;
   }
 }
 
@@ -3075,7 +3157,8 @@ pre {
     top: 10px;
     position: absolute;
   }
-  .sprite-voice-bot {
+  .sprite-voice-bot,
+  .sprite-speaker {
     left: auto;
     margin: 0 0 0 10px;
     top: auto;
@@ -3204,7 +3287,8 @@ pre {
 .customInput {
   width: 99%;
   padding: 10px;
-  border-radius: 7px;
+  border-radius: 5px;
+  border: none;
 }
 
 @media only screen and (max-width: 767px) {
