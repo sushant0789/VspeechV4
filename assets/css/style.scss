@@ -3168,11 +3168,17 @@ pre {
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
+    position: relative;
 
     div {
       -webkit-box-flex: 60%;
       -ms-flex: 60%;
       flex: 60%;
+    }
+    i.sprite-product-avatar {
+      position: absolute;
+      right: 0;
+      left: auto;
     }
   }
 

@@ -3105,11 +3105,17 @@ pre {
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
+    position: relative;
   }
   .product-top-div div {
     -webkit-box-flex: 60%;
     -ms-flex: 60%;
     flex: 60%;
+  }
+  .product-top-div i.sprite-product-avatar {
+    position: absolute;
+    right: 0;
+    left: auto;
   }
   ul.product-ul li {
     font-size: 1.2rem;
