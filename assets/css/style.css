@@ -2084,9 +2084,9 @@ pre {
 }
 
 .voiceBot-working-left {
-  -webkit-box-flex: 55%;
-      -ms-flex: 55%;
-          flex: 55%;
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
 }
 
 .voiceBot-working-left h2 {
@@ -2110,9 +2110,9 @@ pre {
 }
 
 .voiceBot-working-right {
-  -webkit-box-flex: 45%;
-      -ms-flex: 45%;
-          flex: 45%;
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
 }
 
 .voiceBot-working-right img {
