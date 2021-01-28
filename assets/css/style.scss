@@ -2444,6 +2444,12 @@ pre {
   }
 }
 
+.reco-h1 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
 /* Responsive Media Queries */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   #banner {
@@ -2573,6 +2579,17 @@ pre {
 
   .boost-blocks-wrap {
     padding: 40px 15px 0 15px;
+    &.productsBox {
+      padding: 20px 0 0 0;
+      a.boost-block {
+        max-width: 100%;
+        width: 20%;
+        .title-h4 {
+          font-size: 1rem;
+          line-height: 1.5rem;
+        }
+      }
+    }
   }
 
   .boost-block:nth-child(3n + 2) {
@@ -3216,10 +3233,15 @@ pre {
   }
   .voiceBot-left .sprite-voice-bot,
   .voiceBot-left .sprite-speaker,
-  .voiceBot-left .sprite-recognize-speaker {
+  .voiceBot-left .sprite-recognize-speaker,
+  #samples .sprite.sprite-humonitor {
     left: auto;
     margin: 0 0 0 10px;
     top: auto;
+  }
+
+  .reco-h1 {
+    display: inline;
   }
 
   .productsBox a.boost-block .sprite-voice-bot,
